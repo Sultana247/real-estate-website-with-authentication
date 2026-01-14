@@ -4,9 +4,9 @@ import { FaRegUser } from "react-icons/fa";
 
 const Header = () => {
     const navbarItems = <>
-        <li><NavLink to='/'>HOME</NavLink></li>
+        <li className='link link-hover'><NavLink  to='/'>HOME</NavLink></li>
         <li>
-            <div className="dropdown dropdown-hover">
+            <div className="dropdown dropdown-hover link link-hover">
                 <div tabIndex={0} role="button" className="">PROPERTIES</div>
                 <ul tabIndex="-1" className="dropdown-content menu bg-black rounded-box z-1 w-52 p-2 shadow-sm">
                     <li><NavLink>All Properties</NavLink></li>
@@ -16,7 +16,7 @@ const Header = () => {
             </div>
         </li>
         <li>
-            <div className="dropdown dropdown-hover">
+            <div className="dropdown dropdown-hover link link-hover">
                 <div tabIndex={0} role="button" className="">AGENT</div>
                 <ul tabIndex="-1" className="dropdown-content menu bg-black rounded-box z-1 w-52 p-2 shadow-sm">
                     <li><NavLink>All Agents</NavLink></li>
@@ -25,7 +25,7 @@ const Header = () => {
             </div>
         </li>
         <li>
-            <div className="dropdown dropdown-hover">
+            <div className="dropdown dropdown-hover link link-hover">
                 <div tabIndex={0} role="button" className="">BLOG</div>
                 <ul tabIndex="-1" className="dropdown-content menu bg-black rounded-box z-1 w-52 p-2 shadow-sm">
                     <li><NavLink>All Blog Posts</NavLink></li>
@@ -33,7 +33,7 @@ const Header = () => {
                 </ul>
             </div>
         </li>
-        <li><NavLink>CONTACT US</NavLink></li>
+        <li className='link link-hover'><NavLink>CONTACT US</NavLink></li>
         
     </>
     return (
@@ -59,7 +59,7 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 <Link>
-                    <div className='rounded-full border-2 border-white p-4 flex justify-center items-center'>
+                    <div className='hover:bg-white hover:text-black rounded-full border border-white p-4 flex justify-center items-center'>
                         <FaRegUser/>
                     </div>
                 </Link>
