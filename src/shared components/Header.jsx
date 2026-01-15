@@ -37,8 +37,9 @@ const Header = () => {
         
     </>
     return (
-       <div className='bg-black text-white'>
-        <div className="navbar max-w-6xl mx-auto  ">
+       <div className='relative  text-white mt-2'>
+        <div className='bg-black text-white top-0 right-0 left-0 fixed p-4 '>
+            <div className=" navbar max-w-6xl mx-auto  ">
             <div className="navbar-start">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -59,11 +60,12 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 <Link>
-                    <div className='hover:bg-white hover:text-black rounded-full border border-white p-4 flex justify-center items-center'>
+                    <div className='hover:bg-white hover:text-black rounded-full border border-white p-3 flex justify-center items-center'>
                         <FaRegUser/>
                     </div>
                 </Link>
             </div>
+        </div>
         </div>
 
        </div>
