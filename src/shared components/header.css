@@ -1,3 +1,9 @@
-.scrolled{
-    background-color: black;
+.hide{
+    display: none;
+}
+
+.myProfile:hover + .hide{
+ 
+  display: block;
+  color: red;
 }

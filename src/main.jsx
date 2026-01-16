@@ -7,6 +7,9 @@ import { RouterProvider } from "react-router/dom";
 import Root from './components/Root.jsx';
 import Home from './components/Home.jsx';
 import AuthProvider from './provider/AuthProvider.jsx';
+import Userprofile from './shared components/Userprofile.jsx';
+import Login from './components/Login.jsx';
+import Register from './components/Register.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +19,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+        path: "/userprofile",
+        element: <Userprofile></Userprofile>
+      },
+      {
+        path: "/login",
+        element:<Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
       }
     ]
   },
