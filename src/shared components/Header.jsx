@@ -46,7 +46,7 @@ const Header = () => {
     }
     return (
        <div className='relative  text-white mt-2'>
-            <div className='bg-black fixed top-0 right-0 left-0    p-2 '>
+            <div className='bg-black fixed top-0 right-0 left-0  z-10  p-2 '>
                 <div className=" navbar text-white   max-w-6xl mx-auto  ">
                     <div className="navbar-start">
                         <div className="dropdown">
@@ -71,8 +71,8 @@ const Header = () => {
                         <>
                             <Link to='/userprofile'>
                                 <div className=''>
-                                    <img src={user.photoURL}  className='relative myProfile size-8' alt="" />
-                                    <p className='absolute -top-2 hide text-[12px] bg-white text-black rounded-sm p-1'>{user.displayName}</p>
+                                    <img src={user.photoURL}  className='relative myProfile size-8 rounded-full' alt="" />
+                                    <p className='absolute -top-2 hide text-[12px] bg-white text-black rounded-sm p-1'>{user.displayName ? user.displayName : user.reloadUserInfo.screenName}</p>
                                 </div>
 
                             </Link>
