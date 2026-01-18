@@ -10,6 +10,8 @@ import AuthProvider from './provider/AuthProvider.jsx';
 import Userprofile from './shared components/Userprofile.jsx';
 import Login from './components/Login.jsx';
 import Register from './components/Register.jsx';
+import PrivateRoute from './private routes/PrivateRoute.jsx';
+import EstateDetail from './components/EstateDetail.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path: "/estate/:id",
+        element: <PrivateRoute><EstateDetail></EstateDetail> </PrivateRoute>
       }
     ]
   },

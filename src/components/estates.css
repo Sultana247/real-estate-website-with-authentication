@@ -1,0 +1,8 @@
+
+.estate .details{
+    display: none;
+}
+.estate:hover .details{
+    display: block;
+
+}

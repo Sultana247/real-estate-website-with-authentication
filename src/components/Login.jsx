@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthContext';
 import { toast, ToastContainer } from 'react-toastify';
 import { FcGoogle } from "react-icons/fc";
@@ -7,7 +7,9 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { FaGithub } from "react-icons/fa";
 
 const Login = () => {
-     const [error, setError]=useState('')
+     const [error, setError]=useState('');
+     const location = useLocation();
+     console.log(location.state.from)
     const navigate = useNavigate();
     const {loginUser, loginWithPopUp} = useContext(AuthContext);
     const handleLogin =(e)=>{
@@ -32,7 +34,7 @@ const Login = () => {
         .then(resutl=>{
             console.log(resutl.user)
             toast.success("Successfully logged in with Google");
-            navigate('/')
+            navigate(location.state ? location.state.from : '/')
         })
         .catch(error=>{
             console.log(error.message)
