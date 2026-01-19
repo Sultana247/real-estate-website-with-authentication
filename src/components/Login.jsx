@@ -9,7 +9,7 @@ import { FaGithub } from "react-icons/fa";
 const Login = () => {
      const [error, setError]=useState('');
      const location = useLocation();
-     console.log(location.state.from)
+     
     const navigate = useNavigate();
     const {loginUser, loginWithPopUp} = useContext(AuthContext);
     const handleLogin =(e)=>{
